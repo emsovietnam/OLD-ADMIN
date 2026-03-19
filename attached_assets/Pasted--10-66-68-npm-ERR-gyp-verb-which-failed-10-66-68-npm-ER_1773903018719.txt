@@ -1,0 +1,93 @@
+#10 66.68 npm ERR! gyp verb `which` failed }
+#10 66.68 npm ERR! gyp verb check python checking for Python executable "python" in the PATH
+#10 66.68 npm ERR! gyp verb `which` failed Error: not found: python
+#10 66.68 npm ERR! gyp verb `which` failed     at getNotFoundError (/app/node_modules/which/which.js:13:12)
+#10 66.68 npm ERR! gyp verb `which` failed     at F (/app/node_modules/which/which.js:68:19)
+#10 66.68 npm ERR! gyp verb `which` failed     at E (/app/node_modules/which/which.js:80:29)
+#10 66.68 npm ERR! gyp verb `which` failed     at /app/node_modules/which/which.js:89:16
+#10 66.68 npm ERR! gyp verb `which` failed     at /app/node_modules/isexe/index.js:42:5
+#10 66.68 npm ERR! gyp verb `which` failed     at /app/node_modules/isexe/mode.js:8:5
+#10 66.68 npm ERR! gyp verb `which` failed     at FSReqCallback.oncomplete (node:fs:202:21)
+#10 66.68 npm ERR! gyp verb `which` failed  python Error: not found: python
+#10 66.68 npm ERR! gyp verb `which` failed     at getNotFoundError (/app/node_modules/which/which.js:13:12)
+#10 66.68 npm ERR! gyp verb `which` failed     at F (/app/node_modules/which/which.js:68:19)
+#10 66.68 npm ERR! gyp verb `which` failed     at E (/app/node_modules/which/which.js:80:29)
+#10 66.68 npm ERR! gyp verb `which` failed     at /app/node_modules/which/which.js:89:16
+#10 66.68 npm ERR! gyp verb `which` failed     at /app/node_modules/isexe/index.js:42:5
+#10 66.68 npm ERR! gyp verb `which` failed     at /app/node_modules/isexe/mode.js:8:5
+#10 66.68 npm ERR! gyp verb `which` failed     at FSReqCallback.oncomplete (node:fs:202:21) {
+#10 66.68 npm ERR! gyp verb `which` failed   code: 'ENOENT'
+#10 66.68 npm ERR! gyp verb `which` failed }
+#10 66.68 npm ERR! gyp ERR! configure error 
+#10 66.68 npm ERR! gyp ERR! stack Error: Can't find Python executable "python", you can set the PYTHON env variable.
+#10 66.68 npm ERR! gyp ERR! stack     at PythonFinder.failNoPython (/app/node_modules/node-gyp/lib/configure.js:484:19)
+#10 66.68 npm ERR! gyp ERR! stack     at PythonFinder.<anonymous> (/app/node_modules/node-gyp/lib/configure.js:406:16)
+#10 66.68 npm ERR! gyp ERR! stack     at F (/app/node_modules/which/which.js:68:16)
+#10 66.68 npm ERR! gyp ERR! stack     at E (/app/node_modules/which/which.js:80:29)
+#10 66.68 npm ERR! gyp ERR! stack     at /app/node_modules/which/which.js:89:16
+#10 66.68 npm ERR! gyp ERR! stack     at /app/node_modules/isexe/index.js:42:5
+#10 66.68 npm ERR! gyp ERR! stack     at /app/node_modules/isexe/mode.js:8:5
+#10 66.68 npm ERR! gyp ERR! stack     at FSReqCallback.oncomplete (node:fs:202:21)
+#10 66.68 npm ERR! gyp ERR! System Linux 6.8.0-101-generic
+#10 66.68 npm ERR! gyp ERR! command "/usr/local/bin/node" "/app/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+#10 66.68 npm ERR! gyp ERR! cwd /app/node_modules/node-sass
+#10 66.68 npm ERR! gyp ERR! node -v v16.20.2
+#10 66.68 npm ERR! gyp ERR! node-gyp -v v3.8.0
+#10 66.68 npm ERR! gyp ERR! not ok 
+#10 66.68 npm ERR! Build failed with error code: 1
+#10 66.68 
+#10 66.68 npm ERR! A complete log of this run can be found in:
+#10 66.68 npm ERR!     /root/.npm/_logs/2026-03-19T06_41_51_851Z-debug-0.log
+#10 ERROR: process "/bin/sh -c npm install --legacy-peer-deps" did not complete successfully: exit code: 1
+------
+ > [builder 4/6] RUN npm install --legacy-peer-deps:
+66.68 npm ERR! gyp ERR! System Linux 6.8.0-101-generic
+66.68 npm ERR! gyp ERR! command "/usr/local/bin/node" "/app/node_modules/node-gyp/bin/node-gyp.js" "rebuild" "--verbose" "--libsass_ext=" "--libsass_cflags=" "--libsass_ldflags=" "--libsass_library="
+66.68 npm ERR! gyp ERR! cwd /app/node_modules/node-sass
+66.68 npm ERR! gyp ERR! node -v v16.20.2
+66.68 npm ERR! gyp ERR! node-gyp -v v3.8.0
+66.68 npm ERR! gyp ERR! not ok 
+66.68 npm ERR! Build failed with error code: 1
+66.68 
+66.68 npm ERR! A complete log of this run can be found in:
+66.68 npm ERR!     /root/.npm/_logs/2026-03-19T06_41_51_851Z-debug-0.log
+------
+Dockerfile:9
+--------------------
+   7 |     
+   8 |     COPY package.json package-lock.json ./
+   9 | >>> RUN npm install --legacy-peer-deps
+  10 |     
+  11 |     COPY . .
+--------------------
+ERROR: failed to solve: process "/bin/sh -c npm install --legacy-peer-deps" did not complete successfully: exit code: 1
+Running after_script
+00:01
+Running after script...
+$ docker image prune -af
+Total reclaimed space: 0B
+$ docker builder prune -af
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+8wavjvuh1jbulkcmop6gidt2j*              	true 		355B      	Less than a second ago
+1be848ch66ifs90u6ybv4urqm               	true 	812.5kB   	Less than a second ago
+d01u4np3rmvqj82dq4mivpnya*              	true 	0B        	Less than a second ago
+tbko0t8f4iiavvrj36ig55dio*              	true 	1.719MB   	Less than a second ago
+vj5qsu0fzv316zi9jir3k5xus               	true 	0B        	Less than a second ago
+ank29rw8qxcvumqaeyqnhinc2               	true 	0B        	Less than a second ago
+ihv7oj7ehjjnj92kdyrhfu91j               	true 	0B        	About a minute ago
+m8x8kbamdxxpmwnerel9p5dih               	true 	0B        	Less than a second ago
+i560480hc1thc61rbmsctfjgr               	true 	0B        	About a minute ago
+i7zvp28xjkzbyk303566927vd               	true 	0B        	About a minute ago
+lvp15j1j5y2m5q2dtrsj9vmvq               	true 	0B        	About a minute ago
+icm0skjqhgpy5by0q14b3l0ma               	true 	0B        	About a minute ago
+kl0xyujtw82a7ybhrx4bm1dj3               	true 	0B        	About a minute ago
+vm0u0sl1afkkzvf5pxk8zivh7               	true 	0B        	About a minute ago
+g9bn3yo0hhal4qa2ctqf4mq47               	true 	0B        	About a minute ago
+sq05nxb0c8bdtjkq9yjdypbsr               	true 	0B        	About a minute ago
+w5lh2meqb0j8jet44tt3gvqwx               	true 	0B        	About a minute ago
+Total:	2.532MB
+$ docker logout "$DOCKER_REGISTRY"
+Removing login credentials for harbor.emso.vn
+Cleaning up project directory and file based variables
+00:01
+ERROR: Job failed: exit code 1
