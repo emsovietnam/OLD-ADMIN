@@ -1,0 +1,200 @@
+5 DONE 0.1s
+#6 [stage-1 1/3] FROM docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00
+#6 resolve docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00 0.0s done
+#6 sha256:721fa00bc549df26b3e67cc558ff176112d4ba69847537766f3c28e171d180e7 2.50kB / 2.50kB done
+#6 sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 0B / 3.99MB 0.1s
+#6 sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b 0B / 629B 0.1s
+#6 sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00 9.07kB / 9.07kB done
+#6 sha256:501d84f5d06487ff81e506134dc922ed4fd2080d5521eb5b6ee4054fa17d15c4 10.80kB / 10.80kB done
+#6 sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8 0B / 3.41MB 0.1s
+#6 sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8 2.10MB / 3.41MB 0.8s
+#6 extracting sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8
+#6 sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b 629B / 629B 0.9s done
+#6 sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8 3.41MB / 3.41MB 0.8s done
+#6 extracting sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8 0.1s done
+#6 sha256:13fcfbc94648785b918ecc1af675ac5187cdfc30f4fdaf9afa8bd2e9dedf548b 0B / 954B 1.0s
+#6 sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b 0B / 393B 1.0s
+#6 sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 3.99MB / 3.99MB 1.2s
+#6 sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 3.99MB / 3.99MB 1.2s done
+#6 extracting sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 0.1s
+#6 sha256:5406ed7b06d9a94b5bd15843d2a1c7e38796a3ec5dc7f40f16f70cc1d045f453 0B / 1.21kB 1.3s
+#6 extracting sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 0.1s done
+#6 extracting sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b
+#6 sha256:13fcfbc94648785b918ecc1af675ac5187cdfc30f4fdaf9afa8bd2e9dedf548b 954B / 954B 1.4s done
+#6 sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b 393B / 393B 1.6s
+#6 extracting sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b done
+#6 extracting sha256:13fcfbc94648785b918ecc1af675ac5187cdfc30f4fdaf9afa8bd2e9dedf548b done
+#6 sha256:8a3742a9529dc5c00974dfcf5e465be9f1606ff8a1911527b3928cf86ad57465 0B / 1.40kB 1.6s
+#6 sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b 393B / 393B 1.6s done
+#6 extracting sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b done
+#6 sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 0B / 13.04MB 1.8s
+#6 sha256:5406ed7b06d9a94b5bd15843d2a1c7e38796a3ec5dc7f40f16f70cc1d045f453 1.21kB / 1.21kB 1.8s done
+#6 extracting sha256:5406ed7b06d9a94b5bd15843d2a1c7e38796a3ec5dc7f40f16f70cc1d045f453 done
+#6 sha256:8a3742a9529dc5c00974dfcf5e465be9f1606ff8a1911527b3928cf86ad57465 1.40kB / 1.40kB 2.0s done
+#6 extracting sha256:8a3742a9529dc5c00974dfcf5e465be9f1606ff8a1911527b3928cf86ad57465 done
+#6 sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 5.24MB / 13.04MB 2.4s
+#6 extracting sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27
+#6 sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 13.04MB / 13.04MB 2.5s done
+#6 extracting sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 0.2s done
+#6 DONE 3.0s
+#7 [builder 1/6] FROM docker.io/library/node:16-alpine@sha256:a1f9d027912b58a7c75be7716c97cfbc6d3099f3a97ed84aa490be9dee20e787
+#7 resolve docker.io/library/node:16-alpine@sha256:a1f9d027912b58a7c75be7716c97cfbc6d3099f3a97ed84aa490be9dee20e787 0.0s done
+#7 sha256:a1f9d027912b58a7c75be7716c97cfbc6d3099f3a97ed84aa490be9dee20e787 1.43kB / 1.43kB done
+#7 sha256:72e89a86be58c922ed7b1475e5e6f151537676470695dd106521738b060e139d 1.16kB / 1.16kB done
+#7 sha256:2573171e0124bb95d14d128728a52a97bb917ef45d7c4fa8cfe76bc44aa78b73 6.73kB / 6.73kB done
+#7 sha256:7264a8db6415046d36d16ba98b79778e18accee6ffa71850405994cffa9be7de 3.40MB / 3.40MB 2.6s done
+#7 sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 1.05MB / 36.63MB 3.0s
+#7 sha256:93b3025fe10392717d06ec0d012a9ffa2039d766a322aac899c6831dd93382c2 0B / 2.34MB 3.0s
+#7 extracting sha256:7264a8db6415046d36d16ba98b79778e18accee6ffa71850405994cffa9be7de 0.1s done
+#7 sha256:d9059661ce70092af66d2773666584fc8addcb78a2be63f720022f4875577ea9 0B / 452B 3.0s
+#7 sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 4.19MB / 36.63MB 3.1s
+#7 sha256:93b3025fe10392717d06ec0d012a9ffa2039d766a322aac899c6831dd93382c2 1.05MB / 2.34MB 3.1s
+#7 sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 9.44MB / 36.63MB 3.3s
+#7 sha256:93b3025fe10392717d06ec0d012a9ffa2039d766a322aac899c6831dd93382c2 2.34MB / 2.34MB 3.1s done
+#7 sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 13.63MB / 36.63MB 3.4s
+#7 sha256:d9059661ce70092af66d2773666584fc8addcb78a2be63f720022f4875577ea9 452B / 452B 3.3s done
+#7 sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 20.97MB / 36.63MB 3.6s
+#7 sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 29.36MB / 36.63MB 3.8s
+#7 sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 36.63MB / 36.63MB 4.0s done
+#7 extracting sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 0.1s
+#7 extracting sha256:eee371b9ce3ffdbb8aa703b9a14d318801ddc3468f096bb6cfeabbeb715147f9 0.6s done
+#7 extracting sha256:93b3025fe10392717d06ec0d012a9ffa2039d766a322aac899c6831dd93382c2 0.0s done
+#7 extracting sha256:d9059661ce70092af66d2773666584fc8addcb78a2be63f720022f4875577ea9 done
+#7 DONE 4.9s
+#8 [builder 2/6] WORKDIR /app
+#8 DONE 0.7s
+#9 [builder 3/6] COPY package.json package-lock.json ./
+#9 DONE 0.1s
+#10 [builder 4/6] RUN npm ci --legacy-peer-deps
+#10 1.429 npm WARN old lockfile 
+#10 1.429 npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+#10 1.429 npm WARN old lockfile so supplemental metadata must be fetched from the registry.
+#10 1.430 npm WARN old lockfile 
+#10 1.430 npm WARN old lockfile This is a one-time fix-up, please be patient...
+#10 1.430 npm WARN old lockfile 
+#10 35.66 npm notice 
+#10 35.67 npm notice New major version of npm available! 8.19.4 -> 11.12.0
+#10 35.67 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v11.12.0>
+#10 35.67 npm notice Run `npm install -g npm@11.12.0` to update!
+#10 35.67 npm notice 
+#10 35.67 npm ERR! code EUSAGE
+#10 35.68 npm ERR! 
+#10 35.68 npm ERR! `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+#10 35.68 npm ERR! 
+#10 35.68 npm ERR! Missing: chart.js@3.9.1 from lock file
+#10 35.68 npm ERR! Missing: chartjs-plugin-datalabels@2.2.0 from lock file
+#10 35.68 npm ERR! Missing: hls.js@1.6.15 from lock file
+#10 35.68 npm ERR! Missing: plyr@3.8.4 from lock file
+#10 35.68 npm ERR! Missing: react-chartjs-2@3.3.0 from lock file
+#10 35.68 npm ERR! Missing: react-hook-inview@4.5.1 from lock file
+#10 35.68 npm ERR! Missing: react-infinite-scroll-component@6.1.1 from lock file
+#10 35.68 npm ERR! Missing: react-string-replace@1.1.1 from lock file
+#10 35.68 npm ERR! Missing: react-use@17.6.0 from lock file
+#10 35.68 npm ERR! Invalid: lock file's core-js@3.26.1 does not satisfy core-js@3.49.0
+#10 35.68 npm ERR! Missing: custom-event-polyfill@1.0.7 from lock file
+#10 35.68 npm ERR! Missing: loadjs@4.3.0 from lock file
+#10 35.68 npm ERR! Missing: rangetouch@2.0.1 from lock file
+#10 35.68 npm ERR! Missing: url-polyfill@1.1.14 from lock file
+#10 35.68 npm ERR! Missing: throttle-debounce@2.3.0 from lock file
+#10 35.68 npm ERR! Missing: @types/js-cookie@2.2.7 from lock file
+#10 35.68 npm ERR! Missing: @xobotyi/scrollbar-width@1.9.5 from lock file
+#10 35.68 npm ERR! Missing: copy-to-clipboard@3.3.3 from lock file
+#10 35.68 npm ERR! Missing: fast-shallow-equal@1.0.0 from lock file
+#10 35.68 npm ERR! Missing: js-cookie@2.2.1 from lock file
+#10 35.68 npm ERR! Missing: nano-css@5.6.2 from lock file
+#10 35.68 npm ERR! Missing: react-universal-interface@0.6.2 from lock file
+#10 35.68 npm ERR! Missing: resize-observer-polyfill@1.5.1 from lock file
+#10 35.68 npm ERR! Missing: screenfull@5.2.0 from lock file
+#10 35.68 npm ERR! Missing: set-harmonic-interval@1.0.1 from lock file
+#10 35.68 npm ERR! Missing: throttle-debounce@3.0.1 from lock file
+#10 35.68 npm ERR! Missing: ts-easing@0.2.0 from lock file
+#10 35.68 npm ERR! Missing: tslib@2.8.1 from lock file
+#10 35.68 npm ERR! Missing: toggle-selection@1.0.6 from lock file
+#10 35.68 npm ERR! Missing: @jridgewell/sourcemap-codec@1.5.5 from lock file
+#10 35.68 npm ERR! Missing: css-tree@1.1.3 from lock file
+#10 35.68 npm ERR! Invalid: lock file's csstype@3.1.1 does not satisfy csstype@3.2.3
+#10 35.68 npm ERR! Missing: fastest-stable-stringify@2.0.2 from lock file
+#10 35.68 npm ERR! Missing: inline-style-prefixer@7.0.1 from lock file
+#10 35.68 npm ERR! Missing: rtl-css-js@1.16.1 from lock file
+#10 35.68 npm ERR! Missing: stacktrace-js@2.0.2 from lock file
+#10 35.68 npm ERR! Missing: stylis@4.3.6 from lock file
+#10 35.68 npm ERR! Missing: css-in-js-utils@3.1.0 from lock file
+#10 35.68 npm ERR! Missing: stack-generator@2.0.10 from lock file
+#10 35.68 npm ERR! Missing: stacktrace-gps@3.1.2 from lock file
+#10 35.68 npm ERR! Missing: source-map@0.5.6 from lock file
+#10 35.68 npm ERR! Missing: mdn-data@2.0.14 from lock file
+#10 35.68 npm ERR! Missing: source-map@0.6.1 from lock file
+#10 35.68 npm ERR! 
+#10 35.68 npm ERR! Clean install a project
+#10 35.68 npm ERR! 
+#10 35.68 npm ERR! Usage:
+#10 35.68 npm ERR! npm ci
+#10 35.68 npm ERR! 
+#10 35.68 npm ERR! Options:
+#10 35.68 npm ERR! [-S|--save|--no-save|--save-prod|--save-dev|--save-optional|--save-peer|--save-bundle]
+#10 35.68 npm ERR! [-E|--save-exact] [-g|--global] [--global-style] [--legacy-bundling]
+#10 35.68 npm ERR! [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+#10 35.68 npm ERR! [--strict-peer-deps] [--no-package-lock] [--foreground-scripts]
+#10 35.68 npm ERR! [--ignore-scripts] [--no-audit] [--no-bin-links] [--no-fund] [--dry-run]
+#10 35.68 npm ERR! [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+#10 35.68 npm ERR! [-ws|--workspaces] [--include-workspace-root] [--install-links]
+#10 35.68 npm ERR! 
+#10 35.68 npm ERR! aliases: clean-install, ic, install-clean, isntall-clean
+#10 35.68 npm ERR! 
+#10 35.68 npm ERR! Run "npm help ci" for more info
+#10 35.68 
+#10 35.68 npm ERR! A complete log of this run can be found in:
+#10 35.68 npm ERR!     /root/.npm/_logs/2026-03-19T06_38_34_273Z-debug-0.log
+#10 ERROR: process "/bin/sh -c npm ci --legacy-peer-deps" did not complete successfully: exit code: 1
+------
+ > [builder 4/6] RUN npm ci --legacy-peer-deps:
+35.68 npm ERR! [--ignore-scripts] [--no-audit] [--no-bin-links] [--no-fund] [--dry-run]
+35.68 npm ERR! [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+35.68 npm ERR! [-ws|--workspaces] [--include-workspace-root] [--install-links]
+35.68 npm ERR! 
+35.68 npm ERR! aliases: clean-install, ic, install-clean, isntall-clean
+35.68 npm ERR! 
+35.68 npm ERR! Run "npm help ci" for more info
+35.68 
+35.68 npm ERR! A complete log of this run can be found in:
+35.68 npm ERR!     /root/.npm/_logs/2026-03-19T06_38_34_273Z-debug-0.log
+------
+Dockerfile:9
+--------------------
+   7 |     
+   8 |     COPY package.json package-lock.json ./
+   9 | >>> RUN npm ci --legacy-peer-deps
+  10 |     
+  11 |     COPY . .
+--------------------
+ERROR: failed to solve: process "/bin/sh -c npm ci --legacy-peer-deps" did not complete successfully: exit code: 1
+Running after_script
+00:01
+Running after script...
+$ docker image prune -af
+Total reclaimed space: 0B
+$ docker builder prune -af
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+nnakg9gjrghay96cb3ui07x9a*              	true 		350B      	Less than a second ago
+dss3vd0ur0pew3ny3aajz28gd               	true 	812.5kB   	Less than a second ago
+idw2ibn4rwkxfqahlgzmyowfh*              	true 	1.698MB   	Less than a second ago
+sl9oue2vzb5hv54w95et8qlsk               	true 	0B        	Less than a second ago
+9esnk96cnm5rp0g7qj5clwg9c*              	true 	0B        	Less than a second ago
+u1jgmdbhxx0om48kf0e4dishs               	true 	0B        	Less than a second ago
+u2h1zc8zk3vbai6t59izkvxdb               	true 	0B        	39 seconds ago
+yw8r5xw7n19wlsbog6dpg995z               	true 	0B        	39 seconds ago
+93tdxqnpvouzaaqbynbqaxdt4               	true 	0B        	Less than a second ago
+5jnuoykhwdvnreijw8cz6j1go               	true 	0B        	37 seconds ago
+ivauctnrm8gee2am77snnp644               	true 	0B        	39 seconds ago
+szf3dtxsn762ildh479nad35b               	true 	0B        	37 seconds ago
+l5sjof81mw72tm9cqqx4emi24               	true 	0B        	39 seconds ago
+y6i9sde2w8uik9dtn26gs1l41               	true 	0B        	39 seconds ago
+eugse6yjqwc03pl8j1lzqb9p6               	true 	0B        	37 seconds ago
+sfggm2u0lh7lwg0kmmnf2y8m9               	true 	0B        	39 seconds ago
+jxwagxazabjmh4u5o8ntv5va6               	true 	0B        	39 seconds ago
+Total:	2.511MB
+$ docker logout "$DOCKER_REGISTRY"
+Removing login credentials for harbor.emso.vn
+Cleaning up project directory and file based variables
+00:00
+ERROR: Job failed: exit code 1
