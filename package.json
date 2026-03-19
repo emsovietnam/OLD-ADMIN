@@ -7,11 +7,12 @@
     "@date-io/date-fns": "^2.10.8",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/lab": "^5.0.0-alpha.63",
-    "@mui/material": "^5.11.0",
-    "@mui/styles": "^5.11.0",
-    "@mui/x-date-pickers": "^6.2.0",
+    "@mui/base": "5.0.0-alpha.63",
+    "@mui/icons-material": "5.11.0",
+    "@mui/lab": "5.0.0-alpha.63",
+    "@mui/material": "5.11.0",
+    "@mui/styles": "5.11.0",
+    "@mui/x-date-pickers": "6.2.0",
     "@react-oauth/google": "^0.5.1",
     "axios": "^1.2.1",
     "chart.js": "^3.5.1",
@@ -59,6 +60,9 @@
     "eslint-plugin-prettier": "^3.1.4",
     "sass": "^1.57.1",
     "prettier": "^2.1.2"
+  },
+  "overrides": {
+    "@mui/base": "5.0.0-alpha.63"
   },
   "scripts": {
     "start": "react-scripts start",

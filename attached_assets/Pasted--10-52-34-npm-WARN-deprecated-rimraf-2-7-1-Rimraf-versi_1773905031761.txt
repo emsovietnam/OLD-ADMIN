@@ -1,0 +1,117 @@
+#10 52.34 npm WARN deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+#10 52.77 npm WARN deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+#10 53.30 npm WARN deprecated eslint@7.32.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+#10 56.12 npm WARN deprecated @mui/base@5.0.0-beta.40-1: This package has been replaced by @base-ui/react
+#10 56.15 npm WARN deprecated core-js@2.6.12: core-js@<3.23.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Some versions have web compatibility issues. Please, upgrade your dependencies to the actual version of core-js.
+#10 63.27 
+#10 63.27 added 2062 packages, and audited 2063 packages in 1m
+#10 63.27 
+#10 63.27 250 packages are looking for funding
+#10 63.27   run `npm fund` for details
+#10 63.37 
+#10 63.37 149 vulnerabilities (8 low, 98 moderate, 36 high, 7 critical)
+#10 63.37 
+#10 63.37 To address issues that do not require attention, run:
+#10 63.37   npm audit fix
+#10 63.37 
+#10 63.37 To address all issues (including breaking changes), run:
+#10 63.37   npm audit fix --force
+#10 63.37 
+#10 63.37 Run `npm audit` for details.
+#10 63.37 npm notice 
+#10 63.37 npm notice New major version of npm available! 8.19.4 -> 11.12.0
+#10 63.37 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v11.12.0>
+#10 63.37 npm notice Run `npm install -g npm@11.12.0` to update!
+#10 63.37 npm notice 
+#10 DONE 66.6s
+#11 [builder 5/6] COPY . .
+#11 DONE 0.1s
+#12 [builder 6/6] RUN npm run build
+#12 0.358 
+#12 0.358 > admin-social-management@0.1.0 build
+#12 0.358 > react-scripts build
+#12 0.358 
+#12 1.454 Creating an optimized production build...
+#12 3.327 DEPRECATION WARNING [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+#12 3.327 
+#12 3.327 More info: https://sass-lang.com/d/legacy-js-api
+#12 3.327 
+#12 3.354 DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+#12 3.354 
+#12 3.354 More info and automated migrator: https://sass-lang.com/d/import
+#12 3.354 
+#12 3.354   ╷
+#12 3.354 1 │ @import './flexbox';
+#12 3.354   │         ^^^^^^^^^^^
+#12 3.354   ╵
+#12 3.354     stdin 1:9  root stylesheet
+#12 3.354 
+#12 3.355 DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+#12 3.355 
+#12 3.355 More info and automated migrator: https://sass-lang.com/d/import
+#12 3.355 
+#12 3.355   ╷
+#12 3.355 2 │ @import './boxmodel';
+#12 3.355   │         ^^^^^^^^^^^^
+#12 3.355   ╵
+#12 3.355     stdin 2:9  root stylesheet
+#12 3.355 
+#12 49.36 Failed to compile.
+#12 49.36 
+#12 49.36 ./src/components/Button/IconButtonOption.tsx
+#12 49.36 Attempted import error: '@mui/base/ClickAwayListener' does not contain a default export (imported as 'ClickAwayListener').
+#12 49.36 
+#12 49.36 
+#12 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+------
+ > [builder 6/6] RUN npm run build:
+3.355   │         ^^^^^^^^^^^^
+3.355   ╵
+3.355     stdin 2:9  root stylesheet
+3.355 
+49.36 Failed to compile.
+49.36 
+49.36 ./src/components/Button/IconButtonOption.tsx
+49.36 Attempted import error: '@mui/base/ClickAwayListener' does not contain a default export (imported as 'ClickAwayListener').
+49.36 
+49.36 
+------
+Dockerfile:12
+--------------------
+  10 |     
+  11 |     COPY . .
+  12 | >>> RUN npm run build
+  13 |     
+  14 |     FROM nginx:1.25-alpine
+--------------------
+ERROR: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 1
+Running after_script
+00:04
+Running after script...
+$ docker image prune -af
+Total reclaimed space: 0B
+$ docker builder prune -af
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+vd3uqqr06z3ktnvoo7ryq8fxr               	true 		0B        	Less than a second ago
+z0cxr7bvsgzskcfacm6qdz15o*              	true 	1.314MB   	Less than a second ago
+xln488xt4rmcao52r1vnrf9dc*              	true 	344B      	Less than a second ago
+w1c4kwpv24fsyh32vz1wqaqiz               	true 	1.314MB   	Less than a second ago
+jpgggjezg8q0ub9jg5uhkxtzf*              	true 	52B       	Less than a second ago
+zgxb4w5j7kokqnw451jka4ziw               	true 	0B        	About a minute ago
+lyy2u1bpihpcm52uny6w3uize               	true 	645.7MB   	3 seconds ago
+ft4sm9p5qe1ow0je0z2ft1lid               	true 	2.604kB   	3 seconds ago
+ynrfn6ndwsbavdeshly2gfcd1               	true 	0B        	About a minute ago
+5cgu6owhhnkz325uwyt0brfuj               	true 	0B        	About a minute ago
+mt2ib0mmzq485a1o36wmcd6ry               	true 	0B        	3 seconds ago
+jicfp9o4no07796wiykr8cx40               	true 	0B        	3 seconds ago
+w9a0ffcuak6226mflblt1s13q               	true 	0B        	About a minute ago
+5bjg6thbhjv1fo2yzyjx8qtyo               	true 	0B        	2 minutes ago
+90zs52df5d7b3nqkdyavf5x2d               	true 	0B        	About a minute ago
+pf5pfpjw5kvv1tx5mg75zlxxt               	true 	0B        	About a minute ago
+7btmjjlkvm63eg3klevko1812               	true 	0B        	2 minutes ago
+xbtpaivyb7mpxc0kz7xx596dr               	true 	0B        	2 minutes ago
+xpq9l2fk8zmu7pou79lveo5ad               	true 	0B        	2 minutes ago
+2xx6tbvugwtkp45aas59aaj5l               	true 	0B        	2 minutes ago
+Total:	648.3MB
+$ docker logout "$DOCKER_REGISTRY"
+Removing login credentials for harbor.emso.vn
