@@ -1,0 +1,53 @@
+$length: 20;$unit: px;
+$dirs: (
+  't': 'top',
+  'r': 'right',
+  'l': 'left',
+  'b': 'bottom'
+);
+@for $i from 0 through $length {
+  $v: $i * 4;
+  .p {
+    @each $k, $dir in $dirs {
+      &#{$k}-#{$i} {
+        padding-#{$dir}: #{$v}$unit;
+      }
+    }
+    &y-#{$i} {
+      padding-top: #{$v}$unit;
+      padding-bottom: #{$v}$unit;
+    }
+    &x-#{$i} {
+      padding-left: #{$v}$unit;
+      padding-right: #{$v}$unit;
+    }
+    &a-#{$i} {
+      padding: #{$v}$unit;
+    }
+  }
+  .m {
+    @each $k, $dir in $dirs {
+      &#{$k}-#{$i} {
+        margin-#{$dir}: #{$v}$unit;
+      }
+    }
+    &y-#{$i} {
+      margin-top: #{$v}$unit;
+      margin-bottom: #{$v}$unit;
+    }
+    &y-#{$i} {
+      margin-left: #{$v}$unit;
+      margin-right: #{$v}$unit;
+    }
+    &a-#{$i} {
+      margin: #{$v}$unit;
+    }
+  }
+}
+.m {
+  @each $k, $dir in $dirs {
+    &#{$k}-auto {
+      margin-#{$dir}: auto;
+    }
+  }
+}

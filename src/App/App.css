@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  
+}
+.app {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #F1F2F5;
+}
+
+iframe {
+  pointer-events: none;
+}

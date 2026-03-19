@@ -1,0 +1,21 @@
+export const PATHS = {
+  HOME: '/',
+  COURSE: '/courses/',
+  PROJECT: '/projects/',
+  PROJECT_MINE: '/projects/:key?',
+  REPORT: '/reports/home',
+  REPORT_MINE: '/report/:key?',
+  CAMPAIGNS: '/campaigns/',
+  CAMPAIGNS_CREATE: '/campaign/:key?',
+  PRODUCT: '/product/',
+  POST_CHART: '/post_chart/',
+  FEED: '/feed/',
+  COMPLAIN: '/complains/',
+  REPORT_SYSTEM_ERROR: '/system_errors/',
+  VERIFY: '/verify/',
+  VERIFY_SUBJECT: '/verifies/:key?',
+  ADVERTISING_ACCOUNT: '/advertising_account/',
+  FINANCIAL_CONTROL: '/financial_control/',
+  LOGIN: '/login',
+  TEST: '/test'
+};

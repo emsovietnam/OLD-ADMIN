@@ -1,0 +1,8 @@
+#signInDiv iframe {
+  pointer-events: auto !important;
+  min-width: 356px !important;
+}
+
+iframe #container > div {
+  min-width: 356px !important;
+}

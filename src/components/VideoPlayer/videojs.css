@@ -1,0 +1,57 @@
+.plyr:fullscreen video {  max-height: initial !important;
+}
+
+.plyr--full-ui input[type='range'] {
+  color: white;
+}
+
+.plyr__control--overlaid {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded='true'] {
+  background: transparent;
+}
+
+.plyr__control.plyr__tab-focus {
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.plyr__menu__container
+  .plyr__control[role='menuitemradio'][aria-checked='true']::before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.plyr__menu__container
+  .plyr__control[role='menuitemradio'][aria-checked='false']::before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.plyr__menu__container .plyr__control[role='menuitemradio']:before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.plyr__menu__container {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.plyr__menu__container .plyr__control > span {
+  color: white !important;
+}
+
+.plyr__menu__container:after {
+  border-top-color: transparent;
+}
+
+.plyr__menu__container .plyr__control--back:before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.plyr__controls {
+  display: none;
+}
+.plyr--video:hover .plyr__controls {
+  display: flex;
+}

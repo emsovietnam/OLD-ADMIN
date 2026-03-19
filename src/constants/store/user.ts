@@ -1,0 +1,3 @@
+export const GET_INFO_ME_REQ = 'GET_INFO_ME_REQ';
+export const GET_INFO_ME_SUCCESS = 'GET_INFO_ME_SUCCESS';
+export const GET_INFO_ME_FAILED = 'GET_INFO_ME_FAILED';
