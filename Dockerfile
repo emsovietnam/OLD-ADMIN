@@ -1,11 +1,7 @@
-FROM node:16 AS builder
+FROM node:16-bullseye-slim AS builder
 
 ARG CACHE_BUST
 ARG CI_COMMIT_SHA
-
-RUN apt-get update && apt-get install -y python2 make g++ && \
-    ln -sf /usr/bin/python2 /usr/local/bin/python && \
-    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 

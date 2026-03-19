@@ -1,0 +1,197 @@
+$ echo "Login to Docker Registry"
+Login to Docker Registry
+$ echo "$HARBOR_ROBOT_TOKEN" | docker login -u "$HARBOR_ROBOT_USER" -p "$HARBOR_ROBOT_TOKEN" "$DOCKER_REGISTRY"
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /root/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credential-stores
+Login Succeeded
+$ docker builder prune -af || true
+Total:	0B
+$ docker build --pull --no-cache --build-arg CACHE_BUST=$CI_PIPELINE_ID --build-arg CI_COMMIT_SHA=$CI_COMMIT_SHA -t "$DOCKER_IMAGE:$REGISTRY_TAG" -t "$DOCKER_IMAGE:$CI_COMMIT_SHORT_SHA" .
+#0 building with "default" instance using docker driver
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 538B done
+#1 DONE 0.0s
+#2 [internal] load metadata for docker.io/library/node:16
+#2 ...
+#3 [internal] load metadata for docker.io/library/nginx:1.25-alpine
+#3 DONE 2.2s
+#2 [internal] load metadata for docker.io/library/node:16
+#2 DONE 2.2s
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+#5 [internal] load build context
+#5 transferring context: 1.77MB 0.0s done
+#5 DONE 0.0s
+#6 [builder 1/7] FROM docker.io/library/node:16@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b
+#6 resolve docker.io/library/node:16@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b 0.0s done
+#6 sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b 776B / 776B done
+#6 sha256:1ddc7e4055fdb6f6bf31063b593befda814294f9f904b6ddfc21ab1513bafa8e 7.23kB / 7.23kB done
+#6 sha256:c94b82f9827cab6e421b350965a9ef11b25b13ffbd1030536203d541f55dcbe2 2.00kB / 2.00kB done
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 0B / 50.50MB 0.1s
+#6 sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 0B / 17.58MB 0.1s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 0B / 51.89MB 0.1s
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 15.73MB / 50.50MB 1.0s
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 24.12MB / 50.50MB 1.2s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 3.15MB / 51.89MB 1.2s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 8.39MB / 51.89MB 1.3s
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 34.60MB / 50.50MB 1.5s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 14.68MB / 51.89MB 1.5s
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 38.80MB / 50.50MB 1.6s
+#6 sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 2.10MB / 17.58MB 1.6s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 17.83MB / 51.89MB 1.6s
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 46.14MB / 50.50MB 1.8s
+#6 sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 5.24MB / 17.58MB 1.8s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 25.17MB / 51.89MB 1.8s
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 50.50MB / 50.50MB 2.0s
+#6 sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 9.44MB / 17.58MB 2.0s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 35.65MB / 51.89MB 2.0s
+#6 sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 50.50MB / 50.50MB 2.0s done
+#6 sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 13.63MB / 17.58MB 2.1s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 40.89MB / 51.89MB 2.1s
+#6 extracting sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 0.1s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 0B / 191.90MB 2.1s
+#6 sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 16.78MB / 17.58MB 2.2s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 48.23MB / 51.89MB 2.2s
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 51.89MB / 51.89MB 2.3s
+#6 sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 17.58MB / 17.58MB 2.4s done
+#6 sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 51.89MB / 51.89MB 2.4s done
+#6 sha256:ae3b95bbaa61ce24cefdd89e7c74d6fbd7713b2bcae93af47063d06bd7e02172 0B / 4.20kB 2.5s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 0B / 34.79MB 2.5s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 16.78MB / 191.90MB 3.0s
+#6 sha256:ae3b95bbaa61ce24cefdd89e7c74d6fbd7713b2bcae93af47063d06bd7e02172 4.20kB / 4.20kB 3.0s done
+#6 sha256:ca266fd6192108b67fb57b74753a8c4ca5d8bd458baae3d4df7ce9f42dedcc1d 0B / 2.27MB 3.1s
+#6 extracting sha256:311da6c465ea1576925360eba391bcd32dece9be95960a0bc9ffcb25fe712017 1.2s done
+#6 extracting sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 29.36MB / 191.90MB 3.3s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 3.15MB / 34.79MB 3.4s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 12.58MB / 34.79MB 3.6s
+#6 extracting sha256:7e9bf114588c05b2df612b083b96582f3b8dbf51647aa6138a50d09d42df2454 0.2s done
+#6 extracting sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 44.04MB / 191.90MB 3.7s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 16.78MB / 34.79MB 3.7s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 19.92MB / 34.79MB 3.8s
+#6 sha256:ca266fd6192108b67fb57b74753a8c4ca5d8bd458baae3d4df7ce9f42dedcc1d 2.27MB / 2.27MB 3.8s done
+#6 sha256:ee7d78be1eb92caf6ae84fc3af736b23eca018d5dedc967ae5bdee6d7082403b 0B / 450B 3.8s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 23.07MB / 34.79MB 3.9s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 58.72MB / 191.90MB 4.0s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 26.21MB / 34.79MB 4.0s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 29.36MB / 34.79MB 4.1s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 73.40MB / 191.90MB 4.3s
+#6 sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 34.79MB / 34.79MB 4.2s done
+#6 sha256:ee7d78be1eb92caf6ae84fc3af736b23eca018d5dedc967ae5bdee6d7082403b 450B / 450B 4.4s done
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 88.08MB / 191.90MB 4.6s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 100.66MB / 191.90MB 4.9s
+#6 extracting sha256:ffd9397e94b74abcb54e514f1430e00f604328d1f895eadbd482f08cc02444e5 1.2s done
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 120.59MB / 191.90MB 5.3s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 133.17MB / 191.90MB 5.6s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 145.75MB / 191.90MB 6.3s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 158.33MB / 191.90MB 6.8s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 177.21MB / 191.90MB 7.3s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 191.90MB / 191.90MB 7.6s
+#6 sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 191.90MB / 191.90MB 8.3s done
+#6 extracting sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 0.1s
+#6 ...
+#7 [stage-1 1/3] FROM docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00
+#7 resolve docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00 0.0s done
+#7 sha256:721fa00bc549df26b3e67cc558ff176112d4ba69847537766f3c28e171d180e7 2.50kB / 2.50kB done
+#7 sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00 9.07kB / 9.07kB done
+#7 sha256:501d84f5d06487ff81e506134dc922ed4fd2080d5521eb5b6ee4054fa17d15c4 10.80kB / 10.80kB done
+#7 sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8 3.41MB / 3.41MB 5.1s done
+#7 sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 3.99MB / 3.99MB 5.5s done
+#7 extracting sha256:4abcf20661432fb2d719aaf90656f55c287f8ca915dc1c92ec14ff61e67fbaf8 0.0s done
+#7 sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b 629B / 629B 5.7s done
+#7 extracting sha256:fc21a1d387f514f53589abea6d67cd6b329dfd3c9059bc96a552af3b3c97b413 0.1s done
+#7 sha256:13fcfbc94648785b918ecc1af675ac5187cdfc30f4fdaf9afa8bd2e9dedf548b 954B / 954B 6.1s done
+#7 sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b 393B / 393B 6.3s done
+#7 extracting sha256:e6ef242c157026935bf8a69e6cf19f8f6635e44507c813daf0cc644f2e22396b done
+#7 extracting sha256:13fcfbc94648785b918ecc1af675ac5187cdfc30f4fdaf9afa8bd2e9dedf548b done
+#7 sha256:5406ed7b06d9a94b5bd15843d2a1c7e38796a3ec5dc7f40f16f70cc1d045f453 1.21kB / 1.21kB 6.7s done
+#7 extracting sha256:d4bca490e609acaaf54ca73363442d31a31fd136a47a20a12370cf2025f0a10b done
+#7 sha256:8a3742a9529dc5c00974dfcf5e465be9f1606ff8a1911527b3928cf86ad57465 1.40kB / 1.40kB 6.9s done
+#7 extracting sha256:5406ed7b06d9a94b5bd15843d2a1c7e38796a3ec5dc7f40f16f70cc1d045f453 done
+#7 sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 13.04MB / 13.04MB 7.5s done
+#7 extracting sha256:8a3742a9529dc5c00974dfcf5e465be9f1606ff8a1911527b3928cf86ad57465 done
+#7 extracting sha256:0d0c16747d2c6b6c26c064652afcb964c15f1b1e596ec052b2aa19b83948ae27 0.2s done
+#7 DONE 8.5s
+#6 [builder 1/7] FROM docker.io/library/node:16@sha256:f77a1aef2da8d83e45ec990f45df50f1a286c5fe8bbfb8c6e4246c6389705c0b
+#6 extracting sha256:513d779256048c961239af5f500589330546b072775217272e19ffae1635e98e 3.3s done
+#6 extracting sha256:ae3b95bbaa61ce24cefdd89e7c74d6fbd7713b2bcae93af47063d06bd7e02172
+#6 extracting sha256:ae3b95bbaa61ce24cefdd89e7c74d6fbd7713b2bcae93af47063d06bd7e02172 done
+#6 extracting sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 0.1s
+#6 extracting sha256:0e421f66aff42bb069dffc26af6d132194b22a1082b08c5ef7cd69c627783c04 0.7s done
+#6 extracting sha256:ca266fd6192108b67fb57b74753a8c4ca5d8bd458baae3d4df7ce9f42dedcc1d
+#6 extracting sha256:ca266fd6192108b67fb57b74753a8c4ca5d8bd458baae3d4df7ce9f42dedcc1d 0.0s done
+#6 extracting sha256:ee7d78be1eb92caf6ae84fc3af736b23eca018d5dedc967ae5bdee6d7082403b done
+#6 DONE 12.8s
+#8 [builder 2/7] RUN apt-get update && apt-get install -y python2 make g++ &&     ln -sf /usr/bin/python2 /usr/local/bin/python &&     rm -rf /var/lib/apt/lists/*
+#8 0.315 Ign:1 http://deb.debian.org/debian buster InRelease
+#8 0.355 Ign:2 http://deb.debian.org/debian-security buster/updates InRelease
+#8 0.395 Ign:3 http://deb.debian.org/debian buster-updates InRelease
+#8 0.439 Err:4 http://deb.debian.org/debian buster Release
+#8 0.439   404  Not Found [IP: 151.101.194.132 80]
+#8 0.479 Err:5 http://deb.debian.org/debian-security buster/updates Release
+#8 0.479   404  Not Found [IP: 151.101.194.132 80]
+#8 0.519 Err:6 http://deb.debian.org/debian buster-updates Release
+#8 0.519   404  Not Found [IP: 151.101.194.132 80]
+#8 0.522 Reading package lists...
+#8 0.530 E: The repository 'http://deb.debian.org/debian buster Release' does not have a Release file.
+#8 0.530 E: The repository 'http://deb.debian.org/debian-security buster/updates Release' does not have a Release file.
+#8 0.530 E: The repository 'http://deb.debian.org/debian buster-updates Release' does not have a Release file.
+#8 ERROR: process "/bin/sh -c apt-get update && apt-get install -y python2 make g++ &&     ln -sf /usr/bin/python2 /usr/local/bin/python &&     rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+------
+ > [builder 2/7] RUN apt-get update && apt-get install -y python2 make g++ &&     ln -sf /usr/bin/python2 /usr/local/bin/python &&     rm -rf /var/lib/apt/lists/*:
+0.439 Err:4 http://deb.debian.org/debian buster Release
+0.439   404  Not Found [IP: 151.101.194.132 80]
+0.479 Err:5 http://deb.debian.org/debian-security buster/updates Release
+0.479   404  Not Found [IP: 151.101.194.132 80]
+0.519 Err:6 http://deb.debian.org/debian buster-updates Release
+0.519   404  Not Found [IP: 151.101.194.132 80]
+0.522 Reading package lists...
+0.530 E: The repository 'http://deb.debian.org/debian buster Release' does not have a Release file.
+0.530 E: The repository 'http://deb.debian.org/debian-security buster/updates Release' does not have a Release file.
+0.530 E: The repository 'http://deb.debian.org/debian buster-updates Release' does not have a Release file.
+------
+Dockerfile:6
+--------------------
+   5 |     
+   6 | >>> RUN apt-get update && apt-get install -y python2 make g++ && \
+   7 | >>>     ln -sf /usr/bin/python2 /usr/local/bin/python && \
+   8 | >>>     rm -rf /var/lib/apt/lists/*
+   9 |     
+--------------------
+ERROR: failed to solve: process "/bin/sh -c apt-get update && apt-get install -y python2 make g++ &&     ln -sf /usr/bin/python2 /usr/local/bin/python &&     rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+Running after_script
+00:01
+Running after script...
+$ docker image prune -af
+Total reclaimed space: 0B
+$ docker builder prune -af
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+ktmkuolpnp8tu7yx1sv59zd2y*              	true 		499B      	Less than a second ago
+96ph7fjcbphh7hbo9s5eihxmc*              	true 	1.76MB    	Less than a second ago
+0g5ryb8phsoswhay226bpa0m8*              	true 	0B        	Less than a second ago
+ntadbihu3qtxfj2jvfuigw0og               	true 	0B        	Less than a second ago
+ldcyjon7x23jzl6ju0xjcbmv6               	true 	0B        	Less than a second ago
+ijj4zkbjzzqvivlmzv1ypmens               	true 	0B        	5 seconds ago
+ljq9xep5mnvtjjosdsfzxpd1r               	true 	0B        	9 seconds ago
+bkvmow7sv9rwcqayuktswv9wh               	true 	0B        	9 seconds ago
+zq0e52b8nc3pfnvjs19l4ingc               	true 	0B        	5 seconds ago
+kv237hmk7cv900kigdl73hywc               	true 	0B        	9 seconds ago
+cq2s6lrgapfjkzqsp4nv1rqgb               	true 	0B        	5 seconds ago
+b2tj7hjtzy41tjhnvgrpojrrm               	true 	0B        	9 seconds ago
+ns255mgmoakgdydpqpxdv4deg               	true 	0B        	5 seconds ago
+ndt4om76g1pda62wkvkej49kz               	true 	0B        	9 seconds ago
+q5eabyzgmz18ezyc9hxghiu8n               	true 	0B        	5 seconds ago
+houukx47bx1yxyz0fscoekuq0               	true 	0B        	5 seconds ago
+7hvxubu271afus23m5yww8xqt               	true 	0B        	9 seconds ago
+4uv3mgccxlsd3d9ve3nboiplr               	true 	0B        	9 seconds ago
+kc84ga5rajsawqnlocpevqzwg               	true 	0B        	5 seconds ago
+Total:	1.76MB
+$ docker logout "$DOCKER_REGISTRY"
+Removing login credentials for harbor.emso.vn
+Cleaning up project directory and file based variables
+00:01
+ERROR: Job failed: exit code 1
